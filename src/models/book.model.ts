@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+
+import mongoose, { Schema } from 'mongoose';
 
 // para utilizar squemas de mongoose
 const BooksSchema = mongoose.Schema;
@@ -10,7 +11,7 @@ const BookSchema = new BooksSchema({
     author: String,
     isbn: String,
     genre: String,
-    price: Number
+    price: Number,
 });
 
 module.exports = mongoose.model('Book', BookSchema);

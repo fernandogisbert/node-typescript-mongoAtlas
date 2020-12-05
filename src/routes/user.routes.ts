@@ -9,6 +9,7 @@ class UsersRoutes {
     constructor(){
         
         this.router.get('/', usersController.allUsers);
+        this.router.get('/:nombre', usersController.userBooks);
         this.router.post('/', usersController.addUser )
         this.router.delete('/', usersController.deleteUser )
         this.router.put('/', usersController.updateUser)

@@ -15,6 +15,16 @@ class UsersController {
         }
       
     }
+    public async userBooks(req: Request, res: Response){
+        try{
+            const userBooks = await User.findOne({nombre:req.params.nombre})
+                                    .populate('books');
+            res.json(userBooks);
+            console.log(userBooks)
+        }catch(err){
+            console.log(err)
+        }
+    }
     public async addUser(req: Request, res: Response){
         try{
             const userToAdd = new User();
