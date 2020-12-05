@@ -7,7 +7,8 @@ mongoose.connect(`mongodb+srv://ferbert15:${process.env.MATLASSPASS}@cluster0.xz
 class BookController {
     public async findByTitle(req: Request, res: Response){
         try{
-            const bookByTitle = await Book.findOne({title:req.params.title});
+            const bookByTitle = await Book.findOne({title:req.params.title})
+                                            .populate('author');
             res.json(bookByTitle);
             console.log(bookByTitle)
         }catch(err){

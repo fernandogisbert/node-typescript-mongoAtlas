@@ -9,6 +9,7 @@ class UsersRoutes {
     constructor(){
         
         this.router.get('/', usersController.allUsers);
+        // En lugar de crear la tabla de ventas he creado esta ruta muestra cada usuario con los libros que ha comprado
         this.router.get('/:nombre', usersController.userBooks);
         this.router.post('/', usersController.addUser )
         this.router.delete('/', usersController.deleteUser )

@@ -15,6 +15,7 @@ class UsersController {
         }
       
     }
+    // este método combina la collection autores con un array de libros que ha comprado
     public async userBooks(req: Request, res: Response){
         try{
             const userBooks = await User.findOne({nombre:req.params.nombre})
