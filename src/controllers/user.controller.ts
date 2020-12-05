@@ -9,7 +9,7 @@ class UsersController {
         try{
             const allUsersList = await User.find();
             res.json(allUsersList);
-            console.log(allUsersList)
+            // console.log(allUsersList)
         }catch(err){
             console.log(err)
         }

@@ -62,7 +62,6 @@ class AuthorController {
                 newBook.genre = req.body.genre;
                 newBook.price = req.body.price;
 
-    
                 await newBook.save();
 
                 res.json(newBook);
