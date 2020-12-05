@@ -10,7 +10,9 @@ class AuthorRoutes {
 
         this.router.get('/', authorController.allAuthors);
         this.router.get('/:nombre', authorController.booksAuthor);
-        this.router.post('/', authorController.newAuthor)
+        this.router.put('/books/:author', authorController.deleteAuthorId);
+        this.router.post('/books/:author', authorController.create);
+
 
     }
 }
