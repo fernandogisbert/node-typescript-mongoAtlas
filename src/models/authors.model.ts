@@ -8,7 +8,9 @@ const AuthorsSchema = mongoose.Schema;
 const authorsSchema = new AuthorsSchema({
     
     nombre: String,
-    apellido: String
+    apellido: String,
+    librosEscritos:[{type: Schema.Types.ObjectId, ref: "Book"}]
+
 });
 
 module.exports = mongoose.model('Author', authorsSchema);
